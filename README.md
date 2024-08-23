@@ -1,6 +1,5 @@
 			User Guide
 
-Website available: https://powerhousing-aws2.onrender.com
 
 Video demonstration: https://drive.google.com/file/d/1vfrI-KuuxaJC6VQ-q3Dv3_Rk5-Iqm1QK/view?usp=drive_link
 
