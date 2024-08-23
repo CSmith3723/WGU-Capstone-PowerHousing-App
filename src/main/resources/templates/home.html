@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>PowerHousing</title>
+
+</head>
+
+<body class="basic-background">
+<section class="h-100 gradient-form" style="background-color: #24b8ee;">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" th:href="@{/home}">PowerHousing</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" th:href="@{/home}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/calculator}">Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/saved}">Saved Profiles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/createUser}">Create Account</a>
+                    </li>
+                    <li sec:authorize="hasRole('ADMIN')" class="nav-item">
+                        <a class="nav-link" th:href="@{/searchProfile}">Search Profiles</a>
+                    <li sec:authorize="hasRole('ADMIN')" class="nav-item">
+                        <a class="nav-link" th:href="@{/report}">Profile Report</a>
+                    </li>
+                    </li>
+                </ul>
+                <ul class="navbar-nav d-flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/about}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/userLogin}">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-10">
+                <div class="card rounded-3 text-white basic-background">
+                    <div class="row g-0">
+                        <div class="col-lg-6 gradient-custom-3 rounded">
+                            <div class="card-body p-md-5 mx-md-4">
+
+                                <h3 class="mb-4 text-center">Home</h3>
+                                <div th:if="${success}"
+                                     class="alert alert-success alert-dismissible fade show" role="alert">
+                                    Account Created Successfully!
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-center pb-2">
+                                    <span class="mb-0 me-2">Already have an account? </span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center pb-4">
+                                    <a th:href="@{/userLogin}">
+                                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                                class="btn btn-primary basic-background text-black shadow-sm">Login
+                                        </button>
+                                    </a>
+                                </div>
+
+                                <div th:if="${param.error}"
+                                     class="d-flex align-items-center justify-content-center pb-4">
+                                    <i class="alert alert-danger">Invalid username/password.</i>
+                                </div>
+                                <div th:if="${param.logout}"
+                                     class="d-flex align-items-center justify-content-center pb-4">
+                                    <i class="alert alert-success">You have been logged out.</i>
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-center pb-2">
+                                    <span class="mb-0 me-2">Don't have an account?</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center pb-4">
+                                    <a th:href="@{/createUser}">
+                                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                                class="btn btn-primary basic-background text-black shadow-sm">Create
+                                            Account
+                                        </button>
+                                    </a>
+
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-center pb-2">
+                                    <span class="mb-0 me-2">Continue as guest.</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center pb-4">
+                                    <a th:href="@{/calculator}">
+                                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                                class="btn btn-primary basic-background text-black shadow-sm">Calculator
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                            <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+
+                                <h3 class="mb-4 text-center">Welcome to PowerHousing</h3>
+                                <p class="medium mb-0 text-left">PowerHousing is a web application with the goal of
+                                    putting power back in the hands
+                                    of the consumer. Prospective renters or home buyers have the opportunity to quickly
+                                    appraise median housing
+                                    prices for various neighborhoods in the Tampa Bay area in comparison to their
+                                    monthly income. PowerHousing aims
+                                    to save consumers money and put decision-making agency back in their hands,
+                                    especially when housing prices are high.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+
+
+</html>

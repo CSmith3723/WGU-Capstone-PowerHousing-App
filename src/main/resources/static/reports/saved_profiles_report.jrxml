@@ -1,0 +1,151 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="Saved_PowerHousing_Profiles" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="26b5a20b-491b-425d-a03d-981aa06b8e90">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Powerhousing"/>
+    <query language="SQL"><![CDATA[select * from saved_profiles]]></query>
+    <field name="id" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.name" value="id"/>
+        <property name="com.jaspersoft.studio.field.label" value="id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="saved_profiles"/>
+    </field>
+    <field name="username" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="username"/>
+        <property name="com.jaspersoft.studio.field.label" value="username"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="saved_profiles"/>
+    </field>
+    <field name="neighborhood" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="neighborhood"/>
+        <property name="com.jaspersoft.studio.field.label" value="neighborhood"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="saved_profiles"/>
+    </field>
+    <field name="housing_type" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="housing_type"/>
+        <property name="com.jaspersoft.studio.field.label" value="housing_type"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="saved_profiles"/>
+    </field>
+    <field name="housing_price" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.name" value="housing_price"/>
+        <property name="com.jaspersoft.studio.field.label" value="housing_price"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="saved_profiles"/>
+    </field>
+    <field name="gross_wages" class="java.lang.Float">
+        <property name="com.jaspersoft.studio.field.name" value="gross_wages"/>
+        <property name="com.jaspersoft.studio.field.label" value="gross_wages"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="saved_profiles"/>
+    </field>
+    <field name="expenses" class="java.lang.Float">
+        <property name="com.jaspersoft.studio.field.name" value="expenses"/>
+        <property name="com.jaspersoft.studio.field.label" value="expenses"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="saved_profiles"/>
+    </field>
+    <field name="net_wages" class="java.lang.Float">
+        <property name="com.jaspersoft.studio.field.name" value="net_wages"/>
+        <property name="com.jaspersoft.studio.field.label" value="net_wages"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="saved_profiles"/>
+    </field>
+    <group name="Group1">
+        <expression><![CDATA[$F{username}]]></expression>
+        <groupHeader>
+            <band height="37">
+                <element kind="staticText" uuid="2414ce16-8d58-4609-a655-572ece338efa" mode="Opaque" x="0" y="0" width="98" height="32" forecolor="#666666" backcolor="#E6E6E6" fontSize="12.0">
+                    <text><![CDATA[
+Username]]></text>
+                </element>
+                <element kind="textField" uuid="bd637548-789c-4ea7-bd34-f6417b045b5d" mode="Opaque" x="98" y="0" width="457" height="32" forecolor="#006699" backcolor="#E6E6E6" fontSize="24.0" bold="true">
+                    <expression><![CDATA[$F{username}]]></expression>
+                </element>
+                <element kind="line" uuid="6d0a4ebf-016d-4aff-a998-57abe3a2cfcc" x="-20" y="32" width="595" height="1" forecolor="#666666"/>
+            </band>
+        </groupHeader>
+        <groupFooter>
+            <band/>
+        </groupFooter>
+    </group>
+    <background/>
+    <title height="72">
+        <element kind="frame" uuid="035a6e28-3cbe-426f-9af1-fd297ccaf654" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699">
+            <element kind="staticText" uuid="377a0a74-8d25-499b-88b4-32615af2b3ab" x="20" y="20" width="316" height="43" forecolor="#FFFFFF" fontSize="34.0" bold="true">
+                <text><![CDATA[PowerHousing Profiles]]></text>
+            </element>
+            <element kind="staticText" uuid="9298d983-562b-4a2b-b864-d958a7b8004a" x="415" y="31" width="130" height="20" forecolor="#FFFFFF" fontSize="14.0" bold="false" hTextAlign="Right">
+                <text><![CDATA[Saved Profiles for:]]></text>
+            </element>
+            <element kind="textField" uuid="857a87d5-fcbf-4987-b496-335aa5fe0735" x="459" y="69" width="100" height="13" pattern="EEEEE dd MMMMM yyyy">
+                <expression><![CDATA[new java.util.Date()]]></expression>
+            </element>
+            <element kind="textField" uuid="a78582fe-e387-41d2-9b96-5fbcca02b8b0" mode="Opaque" x="460" y="50" width="90" height="20" forecolor="#FFFFFF" backcolor="#006699" fontSize="12.0" bold="true">
+                <expression><![CDATA[$F{username}]]></expression>
+                <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                <property name="com.jaspersoft.studio.unit.height" value="px"/>
+            </element>
+        </element>
+    </title>
+    <pageHeader height="26"/>
+    <columnHeader height="21">
+        <element kind="line" uuid="6d701731-e640-428f-bf92-92bd0b1761f8" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+        <element kind="staticText" uuid="45f872f5-6c2b-4e0c-a4d8-6e3a8deb72f2" mode="Opaque" x="98" y="0" width="102" height="20" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+            <text><![CDATA[Housing Type]]></text>
+            <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="26e8f745-3cf9-4e58-9285-01650ed0b506"/>
+        </element>
+        <element kind="staticText" uuid="e646b0b8-000a-45fa-8727-f71835170f8b" mode="Opaque" x="200" y="0" width="90" height="20" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+            <text><![CDATA[Price]]></text>
+            <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dbd749e9-5078-4a67-b5e4-798198d2fbba"/>
+        </element>
+        <element kind="staticText" uuid="c826c345-aa1e-4b77-9f27-a9dc51d89435" mode="Opaque" x="290" y="0" width="108" height="20" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+            <text><![CDATA[Gross Wages]]></text>
+            <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f1e3eade-bc21-46fe-9e72-324499e539ac"/>
+        </element>
+        <element kind="staticText" uuid="629d4fcf-dd88-4bfa-868c-db9e9a20f45e" mode="Opaque" x="398" y="0" width="76" height="20" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+            <text><![CDATA[Expenses]]></text>
+            <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19406485-dfda-444b-9572-a3427aa474e1"/>
+        </element>
+        <element kind="staticText" uuid="e928c61b-a2b7-4676-b358-a59931ca8df0" mode="Opaque" x="474" y="0" width="81" height="20" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+            <text><![CDATA[Net Wages]]></text>
+            <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d53b962d-dd8e-43b2-9fa2-dd8c774b041d"/>
+        </element>
+        <element kind="staticText" uuid="f1c67602-3b4a-41bd-8287-d6da066c73b6" mode="Opaque" x="0" y="0" width="98" height="20" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+            <text><![CDATA[Neighborhood]]></text>
+            <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fd54ff8b-b151-4c18-b379-40ea8b6f8610"/>
+            <property name="com.jaspersoft.studio.element.name" value="Neighborhood"/>
+        </element>
+    </columnHeader>
+    <detail>
+        <band height="20">
+            <element kind="line" uuid="28f7ab29-5145-4b93-b750-506677aa5449" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+            <element kind="textField" uuid="e979e6ef-c896-4a0f-8d5b-f56d7b86e8df" x="0" y="0" width="98" height="20" fontSize="14.0" textAdjust="StretchHeight">
+                <expression><![CDATA[$F{neighborhood}]]></expression>
+                <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fd54ff8b-b151-4c18-b379-40ea8b6f8610"/>
+            </element>
+            <element kind="textField" uuid="81c1a83b-454c-436a-b66f-16c39af48d7c" x="98" y="0" width="102" height="20" fontSize="14.0" textAdjust="StretchHeight">
+                <expression><![CDATA[$F{housing_type}]]></expression>
+                <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="26e8f745-3cf9-4e58-9285-01650ed0b506"/>
+            </element>
+            <element kind="textField" uuid="27500626-eee0-4928-b4be-89fde4a9e5a4" x="200" y="0" width="90" height="20" fontSize="14.0" textAdjust="StretchHeight">
+                <expression><![CDATA[$F{housing_price}]]></expression>
+                <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dbd749e9-5078-4a67-b5e4-798198d2fbba"/>
+            </element>
+            <element kind="textField" uuid="31bf583b-4845-4867-84d4-bb052d62f9de" x="290" y="0" width="108" height="20" fontSize="14.0" textAdjust="StretchHeight" pattern="¤#,##0.###;¤(-#,##0.###)">
+                <expression><![CDATA[$F{gross_wages}]]></expression>
+                <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f1e3eade-bc21-46fe-9e72-324499e539ac"/>
+            </element>
+            <element kind="textField" uuid="d9323e84-ddff-4209-b824-bef02fc0e4f0" x="398" y="0" width="76" height="20" fontSize="14.0" textAdjust="StretchHeight" pattern="¤#,##0.###;¤(-#,##0.###)">
+                <expression><![CDATA[$F{expenses}]]></expression>
+                <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19406485-dfda-444b-9572-a3427aa474e1"/>
+            </element>
+            <element kind="textField" uuid="598196b7-6d05-486d-bff5-26afe6de5f75" x="474" y="0" width="81" height="20" fontSize="14.0" textAdjust="StretchHeight" pattern="¤#,##0.###;¤(-#,##0.###)">
+                <expression><![CDATA[$F{net_wages}]]></expression>
+                <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d53b962d-dd8e-43b2-9fa2-dd8c774b041d"/>
+            </element>
+        </band>
+    </detail>
+    <columnFooter/>
+    <pageFooter height="17">
+        <element kind="textField" uuid="32033bef-1325-400c-bdd7-0d956df8b122" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" hTextAlign="Right">
+            <expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+        </element>
+        <element kind="textField" uuid="f0b3b71d-b88b-4267-b140-0290cf559e6b" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" evaluationTime="Report">
+            <expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+        </element>
+    </pageFooter>
+    <summary/>
+</jasperReport>
